@@ -1,0 +1,408 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:target {
+    scroll-margin-top: 150px;
+}
+
+body {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+/* Navigation bar */
+#nav {
+    position: fixed;
+    display: inline-block;
+    background-color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 11px grey;
+    z-index: 1;
+}
+
+#nav img {
+    width: 5%;
+    padding: 20px;
+    margin-left: 100px;
+}
+
+li button {
+    background-color: white;
+    padding: 0;
+    border-radius: 0;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+li button:hover {
+    background-color: white;
+    color: gray;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    margin-top: 30px;
+    margin-right: 100px;
+}
+
+li {
+    display: inline;
+    padding: 20px;
+    text-align: center;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li a:hover {
+    color: gray;
+}
+
+/* Dropdown */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    color: black;
+    background-color: #f1f1f1;
+}
+
+/* Banner */
+#banner {
+    margin: 180px 30px 100px 30px;
+}
+
+.container {
+    display: flex;
+    margin: 0 50px;
+}
+
+.column {
+    padding: 10px;
+    text-align: center;
+}
+
+.column img {
+    filter: drop-shadow(1px 2px 2px black);
+}
+
+.column img:hover {
+    transform: scale(1.1,1.1);
+    transition-duration: 1s;
+}
+
+/* Product Selection */
+#products .container {
+    display: flex;
+    margin: 0 70px;
+}
+
+#products .column {
+    margin: 0 auto;
+}
+
+/* Buttons */
+button {
+    border: none;
+    border-radius: 20px;
+    background-color: black;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* Contact Us Form */
+#contactform {
+    background-color: lightgray;
+    display: inline-block;
+    width: 100%;
+}
+
+#contactform form {
+    margin: 30px 150px 50px 150px;
+}
+
+#contactform input[type=text], #contactform textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+#contactform form {
+    margin: 50px 300px;
+}
+
+#contactform input[type=submit] {
+    background-color: orange;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+#contactform input[type=submit]:hover {
+    background-color: #FF9D5C;
+}
+
+/* Account Creation Form */
+.form-container form {
+    margin: 180px 150px 50px 150px;
+}
+
+input[type=text], input[type=email], input[type=tel],
+input[type=password] {
+    width: 90%;
+    padding: 12px;
+    border: lightgray;
+    border-radius: 5px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+input[type=month] {
+    width: calc(60% - 5px);
+    padding: 12px;
+    border: lightgray;
+    border-radius: 5px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+input[type="password"]#CVV {
+    width: calc(70% - 5px); /* Set width for the whole container with some spacing */
+}
+
+.inline-fields {
+    display: flex;
+    justify-content: space-between;
+}
+
+.field {
+    flex: 1;
+    margin-right: 10px; /* Optional margin between the fields */
+}
+
+input[type=submit] {
+    background-color: orange;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    align-self: flex-end; /* Position submit button to the end of the container */
+    margin-top: 20px; /* Add some space between the sections and the button */
+    margin-right: 5px;
+}
+
+input[type=submit]:hover {
+    background-color: #FF9D5C;
+}
+
+input[type=reset] {
+    background-color: black;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    align-self: flex-end; /* Position submit button to the end of the container */
+    margin-top: 20px; /* Add some space between the sections and the button */
+    margin-left: 5px;
+}
+
+input[type=reset]:hover {
+    background-color: gray;
+}
+
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    color: black;
+    text-align: center;
+    padding: 1px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    color: gray;
+}
+
+footer .container {
+    display: flex;
+    margin: 30px;
+}
+
+footer .column {
+    margin: 0 auto;
+}
+
+footer .column img {
+    filter: drop-shadow(0 0 0);
+}
+
+footer .column img:hover {
+    transform: none;
+}
+
+/* Adapter, Case, Protector */
+#adapter .column, #case .column, #protector .column {
+    background-color: #f1f1f1;
+    width: 20%;
+    margin: 0 10px;
+}
+
+#adapter select, #case select, #protector select {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.column input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+    margin: 6px 0 0 5px;
+}
+
+/* Account Creation */
+.form-container {
+    display: flex;
+    background-color: white;
+    display: inline-block;
+    width: 100%;
+    justify-content: space-between; /* To push sections to the sides */
+}
+
+.form-section {
+    flex: 1;
+    padding: 20px;
+    width:45%;
+}
+
+/* Position the left section */
+.left-section {
+    flex: 1;
+    float: left;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+/* Position the right section */
+.right-section {
+    flex: 1;
+    float: right;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-divider {
+    border: none;
+    border-top: 1px solid lightgray; /* Gray line style */
+    margin: 18px 0; /* Margin for spacing */
+}
+
+.buttonss {
+    display: flex;
+    margin-top: 590px; /* Optional margin top */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cart .container {
+    height: 180px;
+    border-bottom: 1px solid #cccccc;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#cart select {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+#cart .column input {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+    margin: 6px 0 0 5px;
+}
+
+#cart .column img:hover {
+    transform: none;
+}

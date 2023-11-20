@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <title>SL Online Phone Shop</title>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div id="nav">
+        <a href="index.html">
+        <img src="images/logo.jpeg" alt="logo" style="float: left"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <button>Products</button>
+                <div class="dropdown-content">
+                    <a href="adapter.html">Phone Adapter</a>
+                    <a href="case.html">Phone Case</a>
+                    <a href="protector.html">Phone Screen Protector</a>
+                </div>
+            </li>
+            <li><a href="#footer">Contact Us</a></li>
+            <li><a href="account.html"><i class="fa-solid fa-user fa-xl"></i></a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-cart-shopping fa-xl"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="column" style="background-color: white; width: 5%; height: 120px;"> </div>
+    
+    <!-- Shopping Cart -->
+    <div form id="cart" style="margin: 40px 0 30px 0;" method="post" action="database.php">
+        <h1 style="text-align: center;">Shopping Cart</h1>
+        <div class="container">
+            <div class="column" style="width: 20%">
+                <img src="images/phone adapter 1.png" alt="Phone Adapter 1" width="50%" style="padding: 30px 0;">
+            </div>
+            <div class="column" style="width: 30%; text-align: left;">
+                <h5>Phone Adapter - 1 USB Port</h5>
+                <h5>$10.00</h5>
+                <p>Quantity:
+                    <input type="number" min="0" value="0" id="quantityAdapter1" onchange="cart()">
+                </p>
+            </div>
+            <div class="column" style="width: 50%"></div>
+        </div>
+        <div class="container">
+            <div class="column" style="width: 20%">
+            <img src="images/phone adapter 2.png" alt="Phone Adapter 2" width="60%" style="padding: 20px 0;">
+        </div>
+        <div class="column" style="width: 30%; text-align: left;">
+            <h5>Phone Adapter - 2 USB-C Ports</h5>
+            <h5>$20.00</h5>
+            <p>Quantity: 
+                <input type="number" min="0" value="0" id="quantityAdapter2" onchange="cart()">
+            </p>
+        </div>
+        <div class="column" style="width: 50%"></div>
+        </div>
+        <div class="container">
+            <div class="column" style="width: 20%">
+                <img src="images/phone adapter 3.png" alt="Phone Adapter 3" width="50%" style="padding: 10px 0;">
+            </div>
+            <div class="column" style="width: 30%; text-align: left;">
+                <h5>Phone Adapter - 1 USB, 2 USB-C Ports</h5>
+                <h5>$30.00</h5>
+                <p>Quantity: 
+                    <input type="number" min="0" value="0" id="quantityAdapter3" onchange="cart()">
+                </p>
+            </div>
+            <div class="column" style="width: 50%"></div>
+        </div>
+        <div class="container">
+            <div class="column" style="width: 20%">
+                <img src="images/phone adapter 4.png" alt="Phone Adapter 4" width="70%" style="padding: 20px 0;">
+            </div>
+            <div class="column" style="width: 30%; text-align: left;">
+                <h5>Phone Adapter - 1 USB, 3 USB-C Ports</h5>
+                <h5>$40.00</h5>
+                <p>Quantity: 
+                    <input type="number" min="0" value="0" id="quantityAdapter4" onchange="cart()">
+                </p>
+            </div>
+            <div class="column" style="width: 50%"></div>
+        </div>
+        <div class="container">
+            <div class="column" style="width: 20%">
+                <img src="images/phone case 1.png" alt="Phone Case 1" width="35%">
+            </div>
+            <div class="column" style="width: 80%; text-align: left;">
+                <h5>Silicon Phone Case</h5>
+                <h5>$10.00</h5>
+                <p>Quantity: 
+                    <input type="number" min="0" value="0" style="width: 15%;" id="quantityCase1" onchange="cart()">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="Model">Model: 
+                        <select name="Model" id="modelCase1" style="width: 20%;">
+                            <option value="">Select phone model</option>
+                            <option value="IPhone13">IPhone 13</option>
+                            <option value="IPhone12">IPhone 12</option>
+                            <option value="IPhone11">IPhone 11</option>
+                            <option value="SamsungGalaxyS23">Samsung Galaxy S23</option>
+                            <option value="SamsungGalaxyZ">Samsung Galaxy Z</option>
+                        </select>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="column" style="width: 20%">
+                <img src="images/phone case 2.png" alt="Phone Case 2" width="35%">
+            </div>
+            <div class="column" style="width: 80%; text-align: left;">
+                <h5>Hard Phone Case</h5>
+                <h5>$15.00</h5>
+                <p>Quantity: 
+                    <input type="number" min="0" value="0" style="width: 15%;" id="quantityCase2" onchange="cart()">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="Model">Model: 
+                        <select name="Model" id="modelCase2" style="width: 20%;">
+                            <option value="">Select phone model</option>
+                            <option value="IPhone13">IPhone 13</option>
+                            <option value="IPhone12">IPhone 12</option>
+                            <option value="IPhone11">IPhone 11</option>
+                            <option value="SamsungGalaxyS23">Samsung Galaxy S23</option>
+                            <option value="SamsungGalaxyZ">Samsung Galaxy Z</option>
+                        </select>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="column" style="width: 20%">
+                <img src="images/phone case 3.png" alt="Phone Case 3" width="55%" style="padding: 15px 0;">
+            </div>
+            <div class="column" style="width: 80%; text-align: left;">
+                <h5>Phone Case with Stand</h5>
+                <h5>$20.00</h5>
+                <p>Quantity: 
+                    <input type="number" min="0" value="0" style="width: 15%;" id="quantityCase3" onchange="cart()">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="Model">Model: 
+                        <select name="Model" id="modelCase3" style="width: 20%;">
+                            <option value="">Select phone model</option>
+                            <option value="IPhone13">IPhone 13</option>
+                            <option value="IPhone12">IPhone 12</option>
+                            <option value="IPhone11">IPhone 11</option>
+                            <option value="SamsungGalaxyS23">Samsung Galaxy S23</option>
+                            <option value="SamsungGalaxyZ">Samsung Galaxy Z</option>
+                        </select>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="column" style="width: 20%">
+                <img src="images/phone case 4.png" alt="Phone Case 4" width="35%">
+            </div>
+            <div class="column" style="width: 80%; text-align: left;">
+                <h5>Phone Case with Card Holder</h5>
+                <h5>$20.00</h5>
+                <p>Quantity: 
+                    <input type="number" min="0" value="0" style="width: 15%;" id="quantityCase4" onchange="cart()">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="Model">Model: 
+                        <select name="Model" id="modelCase4" style="width: 20%;">
+                            <option value="">Select phone model</option>
+                            <option value="IPhone13">IPhone 13</option>
+                            <option value="IPhone12">IPhone 12</option>
+                            <option value="IPhone11">IPhone 11</option>
+                            <option value="SamsungGalaxyS23">Samsung Galaxy S23</option>
+                            <option value="SamsungGalaxyZ">Samsung Galaxy Z</option>
+                        </select>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="column" style="width: 20%">
+                <img src="images/screen protector 1.png" alt="Screen Protector 1" width="35%">
+            </div>
+            <div class="column" style="width: 80%; text-align: left;">
+                <h5>Tempered Glass Screen Protector</h5>
+                <h5>$5.00</h5>
+                <p>Quantity: 
+                    <input type="number" min="0" value="0" style="width: 15%;" id="quantityProtector1" onchange="cart()">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="Model">Model: 
+                        <select name="Model" id="modelProtector1" style="width: 20%;">
+                            <option value="">Select phone model</option>
+                            <option value="IPhone13">IPhone 13</option>
+                            <option value="IPhone12">IPhone 12</option>
+                            <option value="IPhone11">IPhone 11</option>
+                            <option value="SamsungGalaxyS23">Samsung Galaxy S23</option>
+                            <option value="SamsungGalaxyZ">Samsung Galaxy Z</option>
+                        </select>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="column" style="width: 20%">
+                <img src="images/screen protector 2.png" alt="Screen Protector 2" width="35%">
+            </div>
+            <div class="column" style="width: 80%; text-align: left;">
+                <h5>Privacy Screen Protector</h5>
+                <h5>$5.00</h5>
+                <p>Quantity: 
+                    <input type="number" min="0" value="0" style="width: 15%;" id="quantityProtector2" onchange="cart()">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="Model">Model: 
+                        <select name="Model" id="modelProtector2" style="width: 20%;">
+                            <option value="">Select phone model</option>
+                            <option value="IPhone13">IPhone 13</option>
+                            <option value="IPhone12">IPhone 12</option>
+                            <option value="IPhone11">IPhone 11</option>
+                            <option value="SamsungGalaxyS23">Samsung Galaxy S23</option>
+                            <option value="SamsungGalaxyZ">Samsung Galaxy Z</option>
+                        </select>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="column" style="width: 20%">
+                <img src="images/screen protector 3.png" alt="Screen Protector 3" width="40%">
+            </div>
+            <div class="column" style="width: 80%; text-align: left;">
+                <h5>Matte Screen Protector</h5>
+                <h5>$5.00</h5>
+                <p>Quantity: 
+                    <input type="number" min="0" value="0" style="width: 15%;" id="quantityProtector3" onchange="cart()">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="Model">Model: 
+                        <select name="Model" id="modelProtector3" style="width: 20%;">
+                            <option value="">Select phone model</option>
+                            <option value="IPhone13">IPhone 13</option>
+                            <option value="IPhone12">IPhone 12</option>
+                            <option value="IPhone11">IPhone 11</option>
+                            <option value="SamsungGalaxyS23">Samsung Galaxy S23</option>
+                            <option value="SamsungGalaxyZ">Samsung Galaxy Z</option>
+                        </select>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="column" style="width: 20%">
+                <img src="images/screen protector 4.png" alt="Screen Protector 4" width="40%" style="padding: 15px 0;">
+            </div>
+            <div class="column" style="width: 80%; text-align: left;">
+                <h5>Anti Blue-Light Screen Protector</h5>
+                <h5>$5.00</h5>
+                <p>Quantity: 
+                    <input type="number" min="0" value="0" style="width: 15%;" id="quantityProtector4" onchange="cart()">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="Model">Model: 
+                        <select name="Model" id="modelProtector4" style="width: 20%;">
+                            <option value="">Select phone model</option>
+                            <option value="IPhone13">IPhone 13</option>
+                            <option value="IPhone12">IPhone 12</option>
+                            <option value="IPhone11">IPhone 11</option>
+                            <option value="SamsungGalaxyS23">Samsung Galaxy S23</option>
+                            <option value="SamsungGalaxyZ">Samsung Galaxy Z</option>
+                        </select>
+                </p>
+            </div>
+        </div>
+    
+    <!-- Check Out -->
+    <div id=checkout class="container" style="width: 80%; margin: 0 auto;">
+        <div class="column" style="width: 20%;">
+            <h3>Delivery Details</h3>
+            <p>Name | Contact Number</p>
+            <p>Address</p>
+        </div>
+        <div class="column" style="width: 60%;"></div>
+        <div class="column" style="width: 20%">
+            <h3>Total Price: $<span id="totalCost">0</span></h3>
+            <button onclick="message()">PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="column" style="width: 10%;"></div>
+            <div class="column" style="width: 15%;">
+                <a href="index.html"><img src="images/logo.jpeg" style="width: 30%; padding-top: 30px;"></a>
+            </div>
+            <div class="column" style="width: 15%;">
+                <h3>Our Products</h3>
+                <p style="line-height: 25px;">
+                    <a href="adapter.html">Phone Adapter</a><br>
+                    <a href="case.html">Phone Case</a><br>
+                    <a href="protector.html">Phone Protector</a>
+                </p>
+            </div>
+            <div class="column" style="width: 15%;">
+                <h3>Contact Us</h3>
+                <p style="line-height: 25px;">
+                    <i class="fa-solid fa-location-dot fa-lg"></i>&nbsp;&nbsp;50 Nanyang Avenue<br>
+                    <a href="https://wa.me/6598765432?text=Hello" target="_blank">
+                        <i class="fa-brands fa-whatsapp fa-lg"></i>&nbsp;&nbsp;+65 98765432<br></a>
+                    <a href="mailto:hello@gmail.com" target="_blank">
+                    <i class="fa-solid fa-envelope fa-lg"></i>&nbsp;&nbsp;hello@gmail.com
+                </p>
+            </div>
+            <div class="column" style="width: 15%;">
+                <a href="https://www.facebook.com/NTUsg/" target="_blank">
+                    <i class="fa-brands fa-facebook fa-2xl" style="padding-top: 70px;"></i>&nbsp;&nbsp;</a>
+                <a href="https://www.instagram.com/ntu_sg/" target="_blank">
+                    <i class="fa-brands fa-instagram fa-2xl"></i></a>
+            </div>
+            <div class="column" style="width: 10%;"></div>
+        </div>
+    </footer>
+    <script>
+        function cart() {
+            const quantityAdapter1 = document.getElementById('quantityAdapter1').value;
+            const subtotalAdapter1 = parseFloat(quantityAdapter1) * parseFloat("10");
+
+            const quantityAdapter2 = document.getElementById('quantityAdapter2').value;
+            const subtotalAdapter2 = parseFloat(quantityAdapter2) * parseFloat("20");
+
+            const quantityAdapter3 = document.getElementById('quantityAdapter3').value;
+            const subtotalAdapter3 = parseFloat(quantityAdapter3) * parseFloat("30");
+
+            const quantityAdapter4 = document.getElementById('quantityAdapter4').value;
+            const subtotalAdapter4 = parseFloat(quantityAdapter4) * parseFloat("40");
+
+            const quantityCase1 = document.getElementById('quantityCase1').value;
+            const subtotalCase1 = parseFloat(quantityCase1) * parseFloat("10");
+            const modelCase1 = document.getElementById('modelCase1').value;
+            
+            const quantityCase2 = document.getElementById('quantityCase2').value;
+            const subtotalCase2 = parseFloat(quantityCase2) * parseFloat("15");
+            const modelCase2 = document.getElementById('modelCase2').value;
+
+            const quantityCase3 = document.getElementById('quantityCase3').value;
+            const subtotalCase3 = parseFloat(quantityCase3) * parseFloat("20");
+            const modelCase3 = document.getElementById('modelCase3').value;
+
+            const quantityCase4 = document.getElementById('quantityCase4').value;
+            const subtotalCase4 = parseFloat(quantityCase4) * parseFloat("20");
+            const modelCase4 = document.getElementById('modelCase4').value;
+
+            const quantityProtector1 = document.getElementById('quantityProtector1').value;
+            const subtotalProtector1 = parseFloat(quantityProtector1) * parseFloat("5");
+            const modelProtector1 = document.getElementById('modelProtector1').value;
+
+            const quantityProtector2 = document.getElementById('quantityProtector2').value;
+            const subtotalProtector2 = parseFloat(quantityProtector2) * parseFloat("5");
+            const modelProtector2 = document.getElementById('modelProtector2').value;
+
+            const quantityProtector3 = document.getElementById('quantityProtector3').value;
+            const subtotalProtector3 = parseFloat(quantityProtector3) * parseFloat("5");
+            const modelProtector3 = document.getElementById('modelProtector3').value;
+
+            const quantityProtector4 = document.getElementById('quantityProtector4').value;
+            const subtotalProtector4 = parseFloat(quantityProtector4) * parseFloat("5");
+            const modelProtector4 = document.getElementById('modelProtector4').value;
+
+            const totalCost = parseFloat(subtotalAdapter1) + parseFloat(subtotalAdapter2)
+                            + parseFloat(subtotalAdapter3) + parseFloat(subtotalAdapter4)
+                            + parseFloat(subtotalCase1) + parseFloat(subtotalCase2)
+                            + parseFloat(subtotalCase3) + parseFloat(subtotalCase4)
+                            + parseFloat(subtotalProtector1) + parseFloat(subtotalProtector2)
+                            + parseFloat(subtotalProtector3) + parseFloat(subtotalProtector4);
+            document.getElementById('totalCost').textContent = totalCost;
+        }
+
+        function message() {
+            alert("Thank you for your order!\n We have sent a confirmation email to your registered email.")
+            window.location = 'index.html';
+        }
+    </script>
+</body>
+</html>
